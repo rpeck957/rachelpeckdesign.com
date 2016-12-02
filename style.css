@@ -1,0 +1,226 @@
+/*Do this to every style sheet*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BACKGROUND */
+
+/*html{
+    background: url("images/nyc_banner.jpg") no-repeat center center fixed;
+    background-size: cover;
+}*/
+
+#background img{
+/*    COVER  https://css-tricks.com/perfect-full-page-background-image/ */
+    /* background: url("images/nyc_banner.jpg") no-repeat center center fixed;
+    background-size: cover; */
+
+    min-height: 100%;
+    min-width: 1024px;
+/*    width: 100%;*/
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.75;
+}
+
+/* HEADER */
+
+header {
+    text-align: center;
+}
+
+/* NAVBAR */
+
+#navbar{
+    background: #74ccd1;
+    text-align: center;
+    padding: 8px;
+    width: 100%;
+    height: 20%;
+    margin: 0;
+    right: 0;
+    left: 0;
+    position: relative;
+    
+}
+
+#navbar ul li{
+    display: inline;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size : 30px;
+    letter-spacing : .15em;
+    color: #494949;
+    padding: 24px;
+/*    position:absolute;*/
+}
+
+#navbar a{
+    text-decoration: none;
+    color: #494949;
+}
+
+#navbar ul p{
+    display: inline;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size : 35px;
+    color: #fff;
+}
+
+body{
+    
+}
+
+/* BANNER */
+
+#banner img{
+    text-align: center;
+    min-width: 1024px;
+    min-height: auto;
+/*    position: absolute;*/
+    width: 100%;
+    opacity: 1.0;
+}
+
+/* FIX #banner img:hover{
+    text-align: center;
+    min-width: 1024px;
+    min-height: auto;
+    width: 100%;
+    opacity: 1.0; */
+}
+
+/*
+#banner{
+    display: block;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}*/
+
+/* MAIN CONTENT */
+
+#main{
+    text-align: center;
+    width: 100%;
+    margin: auto;
+}
+
+/* BUTTONS */
+
+.buttons{
+    display: inline-block;
+    background: #74ccd1;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    margin: 20px;
+    text-align: center;
+    
+    border:#fff;
+    border-style: solid;
+    border-width: 7px;
+    
+    
+}
+
+.buttons a img{
+    display: inline-block;
+    width: 175px;
+    height: 175px;
+    padding: 5px;
+/*    position: absolute;*/
+/*    position: relative;*/
+    margin: 5px auto;
+    
+    
+}
+
+/* FOOTER */
+
+footer{
+  background: #74ccd1;
+  position: fixed;
+  width: 100%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 10%;
+  padding: 7px;
+}
+
+#email{
+  float: left;
+  width: 50%;
+  height: 80%;
+  position: relative;
+  text-align: left;  
+}
+
+#email a{
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300; 
+  text-transform: none;
+  font-size: 30px;
+  letter-spacing : .075em;
+  color: #494949;
+  text-decoration: none;
+  text-transform: none;
+}
+
+#email i{
+    color: #fff;
+    font-size: 40px;
+}
+
+/* ICONS */
+
+#icons {
+  float: right;
+  width: 50%;
+  height: 80%;
+  position: relative;
+  text-align: right; 
+}
+
+#icons a {
+  text-transform: none;
+  color: #fff;
+  text-decoration: none;
+    
+  font-size: 40px;
+  letter-spacing : 0.15em;
+  color: #fff;
+}
+
+#icons i{
+  color: #fff;
+  font-size: 40px;  
+    
+}
+
+#copyright {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  bottom: 0;
+  clear: both;
+}
+
+#copyright p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300; 
+  text-align: center;
+  font-size: 13px;
+  letter-spacing : .075em;
+}
