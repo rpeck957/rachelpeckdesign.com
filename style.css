@@ -82,7 +82,7 @@ header img{
 /*    text-shadow: 0.5px 0.5px 0.5px rgba(255,255,255,0.5);*/
 }
 
-/* MAIN CONTENT */
+/* INDEX MAIN CONTENT */
 
 #main{
     text-align: center;
@@ -140,7 +140,7 @@ header img{
     font-family: 'Oswald', sans-serif;
     font-weight: 300;
     font-size : 1.25em;
-    letter-spacing : 0.15em;
+    letter-spacing : 0.075em;
     color: #465151;
 }
 
@@ -222,4 +222,86 @@ footer .fa{
   position: relative;
   top: 4px;
   font-size: 1rem;
+}
+
+/* END OF INDEX */
+
+/*ABOUT*/
+
+/*ABOUT CONTENT*/
+
+#about{
+    width: 100%;
+    height: 100vh;
+    margin:1em;
+
+}
+
+#about h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 0.15em;
+    color: #74ccd1;
+    text-align: center;
+}
+
+#about ul{
+    margin:1em;
+}
+
+#about ul li{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size : 0.75em;
+    letter-spacing : 0.075em;
+}
+
+#photo{
+    position: absolute;
+    right:0;
+    left: 0;
+    clear: both;
+    margin: auto;  
+    width: 30%;
+}
+
+#photo img{
+}
+
+#student{
+    position: relative;
+    display: block;
+    float: left;
+    width:30%;
+    height: 300px;
+    top:0;
+}
+
+#designer{
+    position: relative;
+    display: block;
+    float: right;
+    width:30%;
+    height: 300px;
+    top:0;
+}
+
+#lover{
+   position: relative;
+   display: block;
+   float: left;
+   clear: left;
+   width:30%; 
+   height: 300px;
+}
+
+#untitled{
+    position: relative;
+    display: block;
+    float: right;
+    clear:right;
+    width:30%;
+    height:300px;    
 }
