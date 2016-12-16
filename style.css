@@ -1,3 +1,34 @@
+/*FONTS
+
+ALL CAPS HEADINGS (Nav Bar)
+
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 0.15em;
+
+CONTENT
+
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size : 0.75em;
+    letter-spacing : 0.075em;
+    color: #465151;
+*/
+
+/* COLORS 
+
+Main Blue
+    color: #74ccd1;
+    rgb(116,204,209);
+
+Gray
+    color: #465151;
+    rgb(70, 81, 81);
+
+*/
+
 /*Do this to every style sheet*/
 *{
     margin: 0;
@@ -73,13 +104,13 @@ header img{
 #navbar ul li a:hover{
     text-decoration: none;
     color: rgba(255, 255, 255,0.75);
-/*    text-shadow: 0.5px 0.5px 0.5px rgba(255,255,255,0.5);*/
+    text-shadow: 0px 0px 0px rgba(255,255,255,0.5);
 }
 
-#navbar ul li a:active{
+#navbar ul li a.active{
     text-decoration: none;
     color: rgba(255, 255, 255,0.75);
-/*    text-shadow: 0.5px 0.5px 0.5px rgba(255,255,255,0.5);*/
+    text-shadow: 0px 0px 0px rgba(255,255,255,0.5);
 }
 
 /* INDEX MAIN CONTENT */
@@ -97,8 +128,45 @@ header img{
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
     flex: 1;
+    padding:1em;
+}
+
+@media (max-width:800px){
+    #content {
+        flex-direction: column;
+    }
+}
+
+#content h1, #content h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 0.15em;
+    color: #74ccd1;
+    text-align: center;
+}
+
+#content h2{
+    color: #465151;
+}
+
+#content ul{
+    margin:1em;
+}
+
+#content ul li{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size : 0.75em;
+    letter-spacing : 0.075em;
+    color: #465151;
+}
+
+.column {
+    flex-direction: column;
+    flex:1;
 }
 
 .text h1{
@@ -149,7 +217,6 @@ header img{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1;
 }
 
 .buttons{    
@@ -184,7 +251,7 @@ footer{
   display: flex;
   justify-content: space-between;
   
-  color: #494949;
+  color: #465151;
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
   font-size: 1rem;
@@ -196,10 +263,9 @@ footer .fa{
 
 
 #email a{
-  
   text-transform: none;
   letter-spacing : .075em;
-  color: #494949;
+  color: #465151;
   text-decoration: none;
 }
 
@@ -228,80 +294,25 @@ footer .fa{
 
 /*ABOUT CONTENT*/
 
-#about{
-    width: 100%;
-    height: 100vh;
-    margin:1em;
-
-}
-
-#about h1 {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 300;
-    text-transform: uppercase;
-    font-size: 1.5em;
-    letter-spacing: 0.15em;
-    color: #74ccd1;
+#photo {
     text-align: center;
-}
-
-#about ul{
-    margin:1em;
-}
-
-#about ul li{
-    font-family: 'Oswald', sans-serif;
-    font-weight: 300;
-    font-size : 0.75em;
-    letter-spacing : 0.075em;
-}
-
-#photo{
-    position: absolute;
-    right:0;
-    left: 0;
-    clear: both;
-    margin: auto;  
-    width: 30%;
-}
-
-#photo img{
 }
 
 #student{
     position: relative;
-    display: block;
-    float: left;
-    width:30%;
-    height: 300px;
-    top:0;
 }
 
 #designer{
     position: relative;
-    display: block;
-    float: right;
-    width:30%;
-    height: 300px;
-    top:0;
+
 }
 
 #lover{
    position: relative;
-   display: block;
-   float: left;
-   clear: left;
-   width:30%; 
-   height: 300px;
 }
 
 #untitled{
-    position: relative;
-    display: block;
-    float: right;
-    clear:right;
-    width:30%;
-    height:300px;    
+    position: relative;   
 }
 
 /* END OF ABOUT */
@@ -310,32 +321,15 @@ footer .fa{
 
 /*GRAPHIC DESIGN CONTENT*/
 
-#graphicdesign{
-    width: 100%;
-    height: 100vh;
-    margin:1em;
-    
-    display: flex;
-    flex-direction: column;
-    
-}
-
-#graphicdesign h2{
-    font-family: 'Oswald', sans-serif;
-    font-weight: 300;
-    text-transform: uppercase;
-    font-size: 2.5em;
-    letter-spacing: 0.15em;
-    color: #74ccd1;
-    text-align: center;
-}
-
 #logobuttons{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 1;
+    
+    margin: 2em;
+    padding: 2em;
 }
 
 #printbuttons{
@@ -344,6 +338,9 @@ footer .fa{
     justify-content: center;
     align-items: center;
     flex: 1;
+    
+    margin: 2em;
+    padding: 2em;
 }
 
 #adbuttons{
@@ -352,4 +349,7 @@ footer .fa{
     justify-content: center;
     align-items: center;
     flex: 1;
+    
+    margin: 2em;
+    padding: 2em;
 }
