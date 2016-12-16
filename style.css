@@ -52,12 +52,33 @@ body{
     flex: 1;
 }
 
+/* MOBILE */
+
+@media (max-width:1000px){
+    #content {
+        flex-direction: column;
+    }
+    
+    #navbar {
+        flex-direction: column;
+    }
+    
+    #buttons {
+        flex-direction: column;
+    }
+}
+
 /* HEADER */
 
 header {
     text-align: center;
     height: 220px;  
     background: rgba(116,204,209,0.5);
+    
+    display: flex;
+    justify-content: center;
+    align-content: center;
+/*    flex: 1;*/
 }
 
 header img{
@@ -74,12 +95,11 @@ header img{
     text-align: center;
     padding: 8px;
     width: 100%;
-    height: 20%;
-    margin: 0;
-    right: 0;
-    left: 0;
-    position: relative;
+/*    height: 20%;*/
     
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
 }
 
 #navbar ul li{
@@ -115,52 +135,65 @@ header img{
 
 /* INDEX MAIN CONTENT */
 
-#main{
-    text-align: center;
-    width: 100%;
-    margin: auto;
+#content {
+/*    width: 100%;*/
+    display: flex;
     flex: 1;
+    justify-content:center;
+    align-content: center;
+    padding:.5em;
+    margin: 1em;
+    background: rgba(255,255,255,0.75);
 }
 
-/* BUTTONS */
+#contentwork{
+    display: flex;
+    flex: 1;
+    justify-content:center;
+    align-content: center;
+    padding:.5em;
+    margin: 1em;
+    background: 0;
+}
 
-#content {
+#content h1, #content h2, #contentwork h1, #contentwork h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
-    flex: 1;
-    padding:1em;
 }
 
-@media (max-width:800px){
-    #content {
-        flex-direction: column;
-    }
-}
-
-#content h1, #content h2 {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 300;
-    text-transform: uppercase;
-    font-size: 1.5em;
+#content h1, #contentwork h1 {
+    font-size: 2.75em;
     letter-spacing: 0.15em;
+    text-transform: uppercase;
     color: #74ccd1;
-    text-align: center;
+/*    color: #fff;*/
+    text-shadow: 0.75px 0.75px 0.5px rgba(70, 81, 81,0.5);
 }
 
-#content h2{
+#content h2, #contentwork h2 {
+    font-size: 2em;
     color: #465151;
+    text-transform: none;
+    letter-spacing : .025em;
+    padding: 0.05em
 }
 
-#content ul{
+#content ul, #contentwork ul {
     margin:1em;
+    padding: .15em;
 }
 
-#content ul li{
+#content ul li, #contentwork ul li{
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
-    font-size : 0.75em;
-    letter-spacing : 0.075em;
+    font-size : 0.85em;
+    letter-spacing : 0.025em;
     color: #465151;
 }
 
@@ -169,84 +202,82 @@ header img{
     flex:1;
 }
 
-.text h1{
-    position: relative;
-    width: 100%;
-    text-align: center;
-/*    display: flex;*/
-    
-    font-family: 'Oswald', sans-serif;
-    font-weight: 300;
-    text-transform: uppercase;
-    font-size : 1.5em;
-    letter-spacing : 0.15em;
-    color: #465151;
-}
-
 .text a{
-    position: relative;
-    width: 100%;
-    text-align: center;
-/*    display: flex;*/
-    
-    font-family: 'Oswald', sans-serif;
-    font-weight: 300;
-    text-transform: uppercase;
-    font-size : 1.25em;
-    letter-spacing : 0.15em;
-    color: #465151;
-    
     text-decoration: none;
+    position: relative;
+    display: flex;
+    color: #74ccd1;
+    font-size: 1.25em;
+    margin-left: 0.15em;
+    margin-top: 0.05em;
+    
+    text-shadow: 0.5px 0.5px 0.5px rgba(70, 81, 81,0.35);
 }
 
-.text h2{
-    position: relative;
-    width: 100%;
-    text-align: center;
-/*    display: flex;*/
-    
-    font-family: 'Oswald', sans-serif;
-    font-weight: 300;
-    font-size : 1.25em;
-    letter-spacing : 0.075em;
-    color: #465151;
+.text a:hover{
+    text-decoration: none;
+    color: rgba(255,255,255,1);
+    text-shadow: 0px 0px 0px rgba(255,255,255,0.5);
 }
+
+/* BUTTONS */
 
 #buttons{
-    width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    align-items:center;
+    
+    display: flex;
+    flex: 0.5;
+    margin: 1em;
 }
 
-.buttons{    
-    display: inline-block;
+.buttons {    
     background: rgba(116,204,209,0.9);
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
     position: relative;
-    margin: 20px;
+/*    margin: 40px;*/
     text-align: center;
     
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+/*
     border:#fff;
     border-style: solid;
     border-width: 7px;
+*/
 }
+
+.buttonstroke{
+    height: 92%;
+    width: 92%;
+    position: relative;
+    text-align: center;
+    
+    border:rgba(9255,255,255,0.9);
+    border-style: solid;
+    border-width: 7px;
+    box-shadow: 1.5px 1.5px 1px rgba(0,0,0,0.15),
+        inset 1.5px 1.5px 1px rgba(0,0,0,0.15);
+}
+
 .buttons a img{
-    display: inline-block;
-    width: 175px;
-    height: 175px;
-    padding: 5px;
-    margin: 5px auto;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 3.5%;
 }
 
 /* FOOTER */
 
 footer{
   background: rgba(116,204,209,0.95);
-  width: 100%;
+/*  width: 100%;*/
 /*  height: 40px;*/
-  height: 20%;
+/*  height: 20%;*/
   padding: 7px;
   display: flex;
   justify-content: space-between;
@@ -294,12 +325,34 @@ footer .fa{
 
 /*ABOUT CONTENT*/
 
+#aboutcol1, #aboutcol2 {
+/*    padding:0.75em;*/
+    margin: 1em;
+}
+
+#student h1, #designer h1, #lover h1, #untitled h1 {
+    font-size: 2em;
+}
+
 #photo {
     text-align: center;
+/*    display: flex;*/
+/*    align-content: center;*/
+/*    justify-content: center;*/
+/*    padding: 0.75em;*/
+    margin: 1em;
+}
+
+#photo img{
+/*    width: 100%;*/
+    max-width: 407px;
+    max-height: 600px;
+/*    height: 100%;*/
 }
 
 #student{
     position: relative;
+    
 }
 
 #designer{
@@ -311,9 +364,11 @@ footer .fa{
    position: relative;
 }
 
+/*
 #untitled{
     position: relative;   
 }
+*/
 
 /* END OF ABOUT */
 
@@ -321,35 +376,81 @@ footer .fa{
 
 /*GRAPHIC DESIGN CONTENT*/
 
-#logobuttons{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    
-    margin: 2em;
-    padding: 2em;
+#work{
+    margin: 1em;
 }
 
-#printbuttons{
-    width: 100%;
+#work h1{
+    font-size: 3em;
+    padding: 0.15em;
+    b÷ackground: rgba(255,255,255,0.75);
+}
+
+#work h2{
+    font-size: 1.5em;
+    padding: 0.15em;
+    background: rgba(255,255,255,0.75);
+}
+
+#logobuttons{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+#logoimg{
+    background: rgba(255, 255, 255,0.75);
+}
+
+/* FIX THIS
+#logoimg {
+    height: 250px;
+    width: 250px;
+    background: 0;
+    text-align: center;
+
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    z-index: 0;
+}
+
+#logoimg a img {
+    width:250px;
+    height: 250px;
+    text-align: center;
+    
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex: 1;
+    align-content: center;
+    padding: 0;
+    position: relative;
+}
+
+#logostroke{
+    height: 92%;
+    width: 92%;
+    position: relative;
+    text-align: center;
     
-    margin: 2em;
-    padding: 2em;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    z-index: ;
+} */
+
+#printbuttons{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    
+    margin: 1em;
 }
 
 #adbuttons{
-    width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
+    justify-content: space-between;
+    align-items:center;
     
-    margin: 2em;
-    padding: 2em;
+    margin: 1em;
 }
